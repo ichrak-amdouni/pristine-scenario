@@ -1,0 +1,41 @@
+{
+        "IPCPProfiles":
+         [      {"apName": "S0", "ipcpType": "server", "ipcpGroup": "customer", 
+                  "ipcpRibProfile": 
+                  [
+                        {"ribGroup": "flow", "ribType": "private"},
+                        {"ribGroup": "neighbors", "ribType": "private"}
+                  ]
+               
+                },
+                {"apName": "E1", "ipcpType": "edge", "ipcpGroup": "customer", 
+                  "ipcpRibProfile": 
+                  [
+                        {"ribGroup": "flow", "ribType": "private"},
+                        {"ribGroup": "neighbors", "ribType": "private"}
+                  ]
+               
+                },
+                {"apName": "S1", "ipcpType": "server", "ipcpGroup": "customer", 
+                  "ipcpRibProfile": 
+                  [
+                        {"ribGroup": "flow", "ribType": "private"},
+                        {"ribGroup": "neighbors", "ribType": "private"}
+                  ]
+               
+                },
+                {"apName": "E2", "ipcpType": "edge", "ipcpGroup": "customer", 
+                  "ipcpRibProfile": 
+                  [
+                        {"ribGroup": "flow", "ribType": "private"},
+                        {"ribGroup": "neighbors", "ribType": "private"}
+                  ]
+               
+                }
+         ],
+         "DIFProfiles":    
+         [      {"difName": "cloud-access.DIF", "difType": "access", "difGroup": "customer"}, 
+                {"difName": "public-access.DIF", "difType": "access", "difGroup": "customer"}, 
+                {"difName": "cloud-service.DIF", "difType": "management", "difGroup": "customer"}
+         ]
+}

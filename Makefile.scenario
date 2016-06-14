@@ -1,0 +1,42 @@
+all:
+	ipcm
+
+ipcm:
+	/pristine/userspace/bin/ipcm -c ipcm.conf -d -l "dbg"
+
+vlan:
+	ip link add link eth1 name eth1.110 type vlan id 110
+	ip link set dev eth1 up
+	ip link set dev eth1.110 up
+
+modules:
+	modprobe shim-eth-vlan
+	modprobe rina-default-plugin
+	modprobe normal-ipcp
+
+
+echo-client:
+	echo "/pristine/userspace/bin/rina-echo-time -c 10; sleep 10000" > /tmp/rina-client.sh
+	chmod +x /tmp/rina-client.sh
+	xterm -e /tmp/rina-client.sh
+
+echo-server:
+	echo "/pristine/userspace/bin/rina-echo-time -l; sleep 10000" > /tmp/rina-server.sh
+	chmod +x /tmp/rina-server.sh
+	xterm -e /tmp/rina-server.sh
+
+tgen-server:
+	echo "/pristine/userspace/bin/rina-tgen -l; sleep 10000" > /tmp/rina-tgen.sh
+	chmod +x /tmp/rina-tgen.sh
+	xterm -e /tmp/rina-tgen.sh
+
+telnet:
+	echo "telnet localhost 32766; sleep 10000" > /tmp/rina-telnet.sh
+	chmod +x /tmp/rina-telnet.sh
+	xterm -e /tmp/rina-telnet.sh
+
+
+socat:
+	echo "socat - UNIX:/pristine/userspace/var/log/ipcm-console.sock; sleep 10000" > /tmp/rina-socat.sh
+	chmod +x /tmp/rina-socat.sh
+	xterm -e /tmp/rina-socat.sh
