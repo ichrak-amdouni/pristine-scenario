@@ -148,7 +148,7 @@
            "name" : "cbac",
            "version" : "1",
            "parameters": [{"name": "ACprofilestore", "value": "AC-profile.json"},
-                         {"name": "TokenGenIPCPName", "value": "E2"},
+                         {"name": "TokenGenIPCPName", "value": "S1"},
                          {"name": "EncryptAlgo", "value": "AES128"},
                          {"name": "ACPolicystore", "value": "AC-policy.json"},
                          {"name": "DIFConfigstore", "value": "cloud-service.dif"}

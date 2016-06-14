@@ -5,9 +5,9 @@ ipcm:
 	/pristine/userspace/bin/ipcm -c ipcm.conf -d -l "dbg"
 
 vlan:
-	ip link add link eth2 name eth2.111 type vlan id 111
-	ip link set dev eth2 up
-	ip link set dev eth2.111 up
+	ip link add link eth1 name eth1.110 type vlan id 110
+	ip link set dev eth1 up
+	ip link set dev eth1.110 up
 
 modules:
 	modprobe shim-eth-vlan

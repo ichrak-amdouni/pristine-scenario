@@ -33,9 +33,7 @@
                      {"ipcpType": "edge", "difType": "access", "memberIpcpType": "edge", "memberDifType": "access"},
                      {"ipcpType": "customer", "difType": "access", "memberIpcpType": "edge", "memberDifType": "access"},
                      {"ipcpType": "server", "difType": "management", "memberIpcpType": "edge", "memberDifType": "management"},
-                     {"ipcpType": "edge", "difType": "management", "memberIpcpType": "customer", "memberDifType": "management"},
-                     {"ipcpType": "edge", "difType": "access", "memberIpcpType": "customer", "memberDifType": "access"}
-                     
+                     {"ipcpType": "edge", "difType": "management", "memberIpcpType": "customer", "memberDifType": "management"}
                   ]
                  , 
                   "capabilities":
@@ -51,7 +49,7 @@
                      {"ressource": "/difManagement/enrollment/neighbors", "op": "4_M_CREATE"},
                      {"ressource": "/difManagement/nsm/dft", "op": "4_M_CREATE"},
                      {"ressource": "/difManagement/opstatus", "op": "14_M_START"},
-                     {"ressource": "/difManagement/nsm/dft/key", "op": "6_M_DELETE"},
+                     {"ressource": "/difManagement/nsm/dft/key", "op": "6_M_DELETE"}
                   ]
                 }
          ]

@@ -31,22 +31,6 @@
                         {"ribGroup": "neighbors", "ribType": "private"}
                   ]
                
-                },
-                  {"apName": "C0", "ipcpType": "customer", "ipcpGroup": "customer", 
-                  "ipcpRibProfile": 
-                  [
-                        {"ribGroup": "flow", "ribType": "private"},
-                        {"ribGroup": "neighbors", "ribType": "private"}
-                  ]
-               
-                },
-                  {"apName": "C1", "ipcpType": "customer", "ipcpGroup": "customer", 
-                  "ipcpRibProfile": 
-                  [
-                        {"ribGroup": "flow", "ribType": "private"},
-                        {"ribGroup": "neighbors", "ribType": "private"}
-                  ]
-               
                 }
          ],
          "DIFProfiles":    

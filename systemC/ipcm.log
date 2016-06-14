@@ -1,0 +1,145 @@
+5096(1458299399)#librina.nl-manager (DBG): Netlink Manager constructor called, with netlink pid = 1
+5096(1458299399)#librina.nl-manager (INFO): Netlink socket connected to local port 1 
+5096(1458299399)#librina.nl-manager (DBG): Generic Netlink RINA family id: 25
+5096(1458299399)#librina.core (DBG): Initialized Netlink Manager
+5096(1458299399)#librina.core (DBG): Initialized event queue
+5096(1458299399)#librina.core (DBG): Started Netlink Message reader thread
+5096(1458299399)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 28_IPCM_PRESENT; Sport: 1; Dport: 0; Seqnum: 0; Notification; SIPCP: 0; DIPCP: 0
+5096(1458299399)#ipcm (DBG): IPC Manager daemon initialized
+5096(1458299399)#ipcm (DBG):        installation path: /usr/local/irati/bin
+5096(1458299399)#ipcm (DBG):        library path: /usr/local/irati/lib
+5096(1458299399)#ipcm (DBG):        log folder: /usr/local/irati/var/log
+5096(1458299399)#ipcm-catalog (INFO): Catalog: found manifest default.manifest
+5096(1458299399)#ipcm-catalog (INFO): Catalog: found manifest rina-default-plugin.manifest
+5096(1458299399)#ipcm-catalog (INFO): Catalog: found manifest sm-passwd.manifest
+5096(1458299399)#ipcm.dif-allocator (INFO): DIF Directory file: ./da.map
+5096(1458299399)#ipcm.conf (WARN): Cannot open apps to DIF mappings file
+5096(1458299399)#ipcm.dif-template-manager (INFO): Template folder: .
+5096(1458299399)#ipcm.dif-template-manager (DBG): Found DIF template file called: shim-eth-vlan.dif
+5096(1458299399)#ipcm.dif-template-manager (DBG): Found DIF template file called: access.dif
+5096(1458299399)#ipcm.dif-template-manager (INFO): Added or modified DIF template called: shim-eth-vlan.dif
+5096(1458299399)#ipcm.dif-template-manager (INFO): Added or modified DIF template called: access.dif
+5096(1458299399)#ipcm.dif-template-manager (WARN): Default DIF template not present
+5096(1458299399)#ipcm.scripting (DBG): Starting...
+5096(1458299399)#librina.syscalls (DBG): Invoking SYS_createIPCProcess (323)
+5096(1458299399)#ipcm (INFO)[create_ipcp]: IPC process test-eth-vlan:1:: created [id = 1]
+
+5096(1458299399)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 1_ASSIGN_TO_DIF_REQ; Sport: 1; Dport: 0; Seqnum: 1; Request; SIPCP: 0; DIPCP: 1
+5096(1458299399)#ipcm (INFO)[assign_to_dif]: Requested DIF assignment of IPC process test-eth-vlan:1:: to DIF 110:::
+
+5096(1458299399)#ipcm (DBG): Starting main I/O loop...
+5096(1458299399)#ipcm.console (DBG): Console starts [fd=5]
+
+5096(1458299399)#ipcm.dif-template-manager (DBG): DIF Template monitor started, monitoring folder .
+5096(1458299399)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 2_ASSIGN_TO_DIF_RESP; Sport: 0; Dport: 1; Seqnum: 1; Response; SIPCP: 1; DIPCP: 0 
+5096(1458299399)#librina.core (DBG): Added event of type 13_ASSIGN_TO_DIF_RESPONSE and sequence number 1 to events queue
+5096(1458299399)#ipcm (DBG): Got event of type 13_ASSIGN_TO_DIF_RESPONSE and sequence number 1
+5096(1458299399)#ipcm.ipcp (INFO)[assign_to_dif_response_event_handler]: DIF assignment operation completed for IPC process test-eth-vlan:1:: [success=1]
+
+5096(1458299399)#librina.syscalls (DBG): Invoking SYS_createIPCProcess (323)
+5096(1458299399)#librina.ipc-manager (DBG): Craeted a new IPC Process with pid = 5102
+5096(1458299399)#ipcm (INFO)[create_ipcp]: IPC process B.IRATI:1:: created and waiting for initialization[id = 2]
+
+5102(1458299399)#librina.ipc-manager (DBG): New OS Process created, executing IPC Process ...
+5096(1458299399)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 43_IPCP_INIT; Sport: 5102; Dport: 1; Seqnum: 0; Notification; SIPCP: 2; DIPCP: 0 
+5096(1458299399)#librina.core (DBG): Added event of type 28_IPC_PROCESS_DAEMON_INITIALIZED and sequence number 0 to events queue
+5096(1458299399)#ipcm (DBG): Got event of type 28_IPC_PROCESS_DAEMON_INITIALIZED and sequence number 0
+5096(1458299399)#ipcm.ipcp (INFO)[ipc_process_daemon_initialized_event_handler]: IPC process daemon initialized [id = 2]
+
+5096(1458299399)#ipcm-catalog (INFO): Plugin 'rina-default-plugin' successfully loaded
+5096(1458299399)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 58_PLUGIN_LOAD_REQ; Sport: 1; Dport: 5102; Seqnum: 2; Request; SIPCP: 0; DIPCP: 2
+5096(1458299399)#ipcm (INFO)[plugin_load]: Issued plugin-load to IPC process B.IRATI:1::
+
+5096(1458299399)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 59_PLUGIN_LOAD_RESP; Sport: 5102; Dport: 1; Seqnum: 2; Response; SIPCP: 2; DIPCP: 0 
+5096(1458299399)#librina.core (DBG): Added event of type 40_PLUGIN_LOAD_RESPONSE and sequence number 2 to events queue
+5096(1458299399)#ipcm (DBG): Got event of type 40_PLUGIN_LOAD_RESPONSE and sequence number 2
+5096(1458299399)#ipcm.policies (INFO)[ipc_process_plugin_load_response_handler]: plugin-load-op [plugin=default, load=1] completed on IPC process B.IRATI:1:: [success=1]
+
+5096(1458299399)#ipcm-catalog (INFO): Plugin 'default' successfully loaded
+5096(1458299399)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 1_ASSIGN_TO_DIF_REQ; Sport: 1; Dport: 5102; Seqnum: 3; Request; SIPCP: 0; DIPCP: 2
+5096(1458299399)#ipcm (INFO)[assign_to_dif]: Requested DIF assignment of IPC process B.IRATI:1:: to DIF access.DIF:::
+
+5096(1458299399)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 2_ASSIGN_TO_DIF_RESP; Sport: 5102; Dport: 1; Seqnum: 3; Response; SIPCP: 2; DIPCP: 0 
+5096(1458299399)#librina.core (DBG): Added event of type 13_ASSIGN_TO_DIF_RESPONSE and sequence number 3 to events queue
+5096(1458299399)#ipcm (DBG): Got event of type 13_ASSIGN_TO_DIF_RESPONSE and sequence number 3
+5096(1458299399)#ipcm.ipcp (INFO)[assign_to_dif_response_event_handler]: DIF assignment operation completed for IPC process B.IRATI:1:: [success=1]
+
+5096(1458299399)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 18_IPCM_REG_APP_REQ; Sport: 1; Dport: 0; Seqnum: 4; Request; SIPCP: 0; DIPCP: 1
+5096(1458299399)#ipcm (INFO)[register_at_dif]: Requested DIF registration of IPC process B.IRATI:1:: at DIF 110::: through IPC process test-eth-vlan:1::
+
+5096(1458299399)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 19_ICPM_REG_APP_RESP; Sport: 0; Dport: 1; Seqnum: 4; Response; SIPCP: 1; DIPCP: 0 
+5096(1458299399)#librina.core (DBG): Added event of type 23_IPCM_REGISTER_APP_RESPONSE and sequence number 4 to events queue
+5096(1458299399)#ipcm (DBG): Got event of type 23_IPCM_REGISTER_APP_RESPONSE and sequence number 4
+5096(1458299399)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 5_DIF_REG_NOT; Sport: 1; Dport: 5102; Seqnum: 0; Notification; SIPCP: 0; DIPCP: 2
+5096(1458299399)#ipcm.ipcp (INFO)[ipcm_register_response_ipcp]: IPC process B.IRATI:1:: informed about its registration to N-1 DIF 110:::
+
+5096(1458299399)#ipcm.scripting (DBG): Finalizing...
+5096(1458299426)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 27_SOCK_CLOSED_NOT; Sport: 0; Dport: 1; Seqnum: 0; Notification; SIPCP: 0; DIPCP: 0 
+5096(1458299426)#librina.core (DBG): NL socket at port 8390283 is closed
+5096(1458299430)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 27_SOCK_CLOSED_NOT; Sport: 0; Dport: 1; Seqnum: 0; Notification; SIPCP: 0; DIPCP: 0 
+5096(1458299430)#librina.core (DBG): NL socket at port 8390283 is closed
+5096(1458299454)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 12_IPCM_ALLOC_FLOW_RESP_ARR; Sport: 0; Dport: 1; Seqnum: 1; Request; SIPCP: 1; DIPCP: 0 
+5096(1458299454)#librina.core (DBG): Added event of type 0_FLOW_ALLOCATION_REQUESTED and sequence number 1 to events queue
+5096(1458299454)#ipcm (DBG): Got event of type 0_FLOW_ALLOCATION_REQUESTED and sequence number 1
+5096(1458299454)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 46_APP_ALLOC_FLOW_REQ_ARR; Sport: 1; Dport: 5102; Seqnum: 5; Request; SIPCP: 0; DIPCP: 2
+5096(1458299454)#ipcm.flow-alloc (INFO)[flow_allocation_requested_remote]: Arrived request for flow allocation between B.IRATI:1:: and A.IRATI:1::te
+
+5096(1458299454)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 47_APP_ALLOC_FLOW_RESP; Sport: 5102; Dport: 1; Seqnum: 5; Response; SIPCP: 2; DIPCP: 0 
+5096(1458299454)#librina.core (DBG): Added event of type 2_ALLOCATE_FLOW_RESPONSE and sequence number 5 to events queue
+5096(1458299454)#ipcm (DBG): Got event of type 2_ALLOCATE_FLOW_RESPONSE and sequence number 5
+5096(1458299454)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 14_IPCM_ALLOC_FLOW_RESP; Sport: 1; Dport: 0; Seqnum: 1; Response; SIPCP: 2; DIPCP: 1
+5096(1458299454)#ipcm.flow-alloc (INFO)[allocate_flow_response_event_handler]: : Informing IPC process test-eth-vlan:1:: about flow allocation from application B.IRATI:1:: to application A.IRATI:1::te in DIF 110::: [success = 1, port-id = 1]
+
+5096(1458299787)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 51_APP_REG_REQ; Sport: 7130; Dport: 1; Seqnum: 1458299788; Request; SIPCP: 0; DIPCP: 0 
+5096(1458299787)#librina.core (DBG): Added event of type 7_APPLICATION_REGISTRATION_REQUEST and sequence number 1458299788 to events queue
+5096(1458299787)#ipcm (DBG): Got event of type 7_APPLICATION_REGISTRATION_REQUEST and sequence number 1458299788
+5096(1458299787)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 18_IPCM_REG_APP_REQ; Sport: 1; Dport: 5102; Seqnum: 6; Request; SIPCP: 0; DIPCP: 2
+5096(1458299787)#ipcm.app (INFO)[app_reg_req_handler]: Requested registration of application rina.apps.echotime.server:1:: to IPC process B.IRATI:1::
+
+5096(1458299787)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 19_ICPM_REG_APP_RESP; Sport: 5102; Dport: 1; Seqnum: 6; Response; SIPCP: 2; DIPCP: 0 
+5096(1458299787)#librina.core (DBG): Added event of type 23_IPCM_REGISTER_APP_RESPONSE and sequence number 6 to events queue
+5096(1458299787)#ipcm (DBG): Got event of type 23_IPCM_REGISTER_APP_RESPONSE and sequence number 6
+5096(1458299787)#librina.ipc-manager (DBG): ApplicationManager::applicationRegistered called
+5096(1458299787)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 52_APP_REG_RESP; Sport: 1; Dport: 7130; Seqnum: 1458299788; Response; SIPCP: 0; DIPCP: 0
+5096(1458299787)#ipcm.app (INFO)[notify_app_reg]: Application rina.apps.echotime.server:1:: informed about its registration to N-1 DIF access.DIF::: [success = 1]
+
+5096(1458299807)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 12_IPCM_ALLOC_FLOW_RESP_ARR; Sport: 5102; Dport: 1; Seqnum: 1458299405; Request; SIPCP: 2; DIPCP: 0 
+5096(1458299807)#librina.core (DBG): Added event of type 0_FLOW_ALLOCATION_REQUESTED and sequence number 1458299405 to events queue
+5096(1458299807)#ipcm (DBG): Got event of type 0_FLOW_ALLOCATION_REQUESTED and sequence number 1458299405
+5096(1458299807)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 46_APP_ALLOC_FLOW_REQ_ARR; Sport: 1; Dport: 7130; Seqnum: 7; Request; SIPCP: 0; DIPCP: 0
+5096(1458299807)#ipcm.flow-alloc (INFO)[flow_allocation_requested_remote]: Arrived request for flow allocation between rina.apps.echotime.server:1:: and rina.apps.echotime.client:1::
+
+5096(1458299807)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 47_APP_ALLOC_FLOW_RESP; Sport: 7130; Dport: 1; Seqnum: 7; Response; SIPCP: 0; DIPCP: 0 
+5096(1458299807)#librina.core (DBG): Added event of type 2_ALLOCATE_FLOW_RESPONSE and sequence number 7 to events queue
+5096(1458299807)#ipcm (DBG): Got event of type 2_ALLOCATE_FLOW_RESPONSE and sequence number 7
+5096(1458299807)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 14_IPCM_ALLOC_FLOW_RESP; Sport: 1; Dport: 5102; Seqnum: 1458299405; Response; SIPCP: 0; DIPCP: 2
+5096(1458299807)#ipcm.flow-alloc (INFO)[allocate_flow_response_event_handler]: : Informing IPC process B.IRATI:1:: about flow allocation from application rina.apps.echotime.server:1:: to application rina.apps.echotime.client:1:: in DIF access.DIF::: [success = 1, port-id = 2]
+
+5096(1458299908)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 17_IPCM_FLOW_DEALLOC_NOT; Sport: 5102; Dport: 1; Seqnum: 0; Notification; SIPCP: 2; DIPCP: 0 
+5096(1458299908)#librina.core (DBG): Added event of type 6_FLOW_DEALLOCATED and sequence number 0 to events queue
+5096(1458299908)#ipcm (DBG): Got event of type 6_FLOW_DEALLOCATED and sequence number 0
+5096(1458299908)#librina.ipc-manager (DBG): ApplicationManager::flowDeallocatedRemotely called
+5096(1458299908)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 50_APP_FLOW_DEALLOC_NOT; Sport: 1; Dport: 7130; Seqnum: 0; Notification; SIPCP: 0; DIPCP: 0
+5096(1458299908)#ipcm.flow-alloc (INFO)[flow_deallocated_event_handler]: IPC process B.IRATI:1:: and local application rina.apps.echotime.server:1:: informed that flow with port-id 2 has been deallocated remotely 
+
+5096(1458300172)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 27_SOCK_CLOSED_NOT; Sport: 0; Dport: 1; Seqnum: 0; Notification; SIPCP: 0; DIPCP: 0 
+5096(1458300172)#librina.core (DBG): NL socket at port 8390283 is closed
+5096(1458300176)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 27_SOCK_CLOSED_NOT; Sport: 0; Dport: 1; Seqnum: 0; Notification; SIPCP: 0; DIPCP: 0 
+5096(1458300176)#librina.core (DBG): NL socket at port 8390283 is closed
+5096(1458300429)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 27_SOCK_CLOSED_NOT; Sport: 0; Dport: 1; Seqnum: 0; Notification; SIPCP: 0; DIPCP: 0 
+5096(1458300429)#librina.core (DBG): NL socket at port 7130 is closed
+5096(1458300429)#librina.core (DBG): Added event of type 22_OS_PROCESS_FINALIZED and sequence number 0 to events queue
+5096(1458300429)#ipcm (DBG): Got event of type 22_OS_PROCESS_FINALIZED and sequence number 0
+5096(1458300429)#ipcm.app (INFO)[os_process_finalized_handler]: Application rina.apps.echotime.server:1::terminated
+
+5096(1458300429)#librina.nl-manager (DBG): NL msg TX. Fam: 25; Opcode: 20_IPCM_UNREG_APP_REQ; Sport: 1; Dport: 5102; Seqnum: 8; Request; SIPCP: 0; DIPCP: 2
+5096(1458300429)#ipcm (INFO)[unregister_app_from_ipcp]: Requested unregistration of application rina.apps.echotime.server:1:: from IPC process B.IRATI:1::
+
+5096(1458300429)#librina.nl-manager (DBG): NL msg RX. Fam: 25; Opcode: 21_IPCM_UNREG_APP_RESP; Sport: 5102; Dport: 1; Seqnum: 8; Response; SIPCP: 2; DIPCP: 0 
+5096(1458300429)#librina.core (DBG): Added event of type 24_IPCM_UNREGISTER_APP_RESPONSE and sequence number 8 to events queue
+5096(1458300429)#ipcm (DBG): Got event of type 24_IPCM_UNREGISTER_APP_RESPONSE and sequence number 8
+5096(1458300429)#ipcm (CRIT): Got signal SIGSEGV
+5096(1458300429)#rinad-debug (DBG): Cannot dump a backtrace
+5096(1458300430)#ipcm.dif-template-manager (DBG): DIF Template Manager stopped
+5096(1458300430)#librina.concurrency (CRIT): Cannot destroy condition variable
+5096(1458300431)#librina.nl-manager (DBG): Netlink Manager destructor called
